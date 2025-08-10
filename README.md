@@ -1,73 +1,24 @@
-PrivCheck - Windows Privilege Auditor
-Purpose:
-Identifies high-risk security privileges on Windows systems that could enable privilege escalation attacks. Designed for system administrators and security professionals to audit account permissions.
+# 🔒 PrivCheck - Windows Privilege Escalation Auditor
 
-Key Features:
+**Identify high-risk privileges that could lead to system compromise**  
+Batch script for security professionals to audit dangerous Windows privileges.
 
-Dangerous Privilege Detection
-Scans for 6 critical privileges:
+![Windows Privilege Audit](https://img.shields.io/badge/Platform-Windows-blue?logo=windows) 
+![Batch Script](https://img.shields.io/badge/Language-Batch-green)
 
-SeDebugPrivilege (memory access)
+## 📌 Features
 
-SeImpersonatePrivilege (security context impersonation)
+- Detects 6 critical privileges enabling privilege escalation
+- Automated risk assessment (LOW/MEDIUM/HIGH)
+- Self-contained batch script - no dependencies
+- Timestamped audit reports
+- Administrator context detection
+- Remediation guidance with policy steps
+- Human-readable impact analysis
 
-SeAssignPrimaryTokenPrivilege (process token replacement)
+## 🚀 Usage
 
-SeTakeOwnershipPrivilege (object ownership takeover)
-
-SeBackup/SeRestorePrivilege (ACL bypass)
-
-Risk Assessment
-Classifies findings into:
-
-🟢 LOW (0-1 privileges)
-
-🟡 MEDIUM (2-3 privileges)
-
-🔴 HIGH (4+ privileges)
-
-Automated Reporting
-Generates timestamped audit logs with:
-
-Privilege status (Enabled/Disabled)
-
-Impact analysis
-
-Mitigation steps
-
-System metadata (user/host/timestamp)
-
-Remediation Guidance
-Provides actionable steps to harden systems via:
-
-Least privilege enforcement
-
-Security Policy (secpol.msc) configuration
-
-Service account auditing procedures
-
-Usage Requirements:
-⚠️ Requires administrative rights for full system visibility. Warns when run without elevation.
-
-Output Example:
-
-text
-[!!!] SECURITY ALERT: 3 DANGEROUS PRIVILEGES FOUND [!!!]
-Privileges: SeDebugPrivilege, SeImpersonatePrivilege, SeTakeOwnershipPrivilege
-Threat Level: MEDIUM
-Security Impact:
-  [DEBUG]    Debug programs (Memory access)
-  [IMPERSON] Impersonate security contexts
-  [OWNER]    Take object ownership
-Ideal For:
-
-Proactive system hardening
-
-Privilege escalation vulnerability checks
-
-Security compliance audits
-
-Administrator account reviews
-
-This tool helps prevent lateral movement and privilege escalation by identifying overly permissive account settings in Windows environments. The batch script implementation makes it portable and executable without dependencies.
-
+1. Download [`PrivCheck.txt`](PrivCheck.txt) and rename to `PrivCheck.bat`
+2. **Run as Administrator**:
+   ```cmd
+   PrivCheck.bat
