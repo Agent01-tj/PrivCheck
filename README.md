@@ -15,6 +15,7 @@ Batch script for security professionals to audit dangerous Windows privileges.
 - Administrator context detection
 - Remediation guidance with policy steps
 - Human-readable impact analysis
+![Graph](https://github.com/user-attachments/assets/9a28e3b0-602d-47df-933a-133d33647c6b)
 
 ## 🚀 Usage
 
