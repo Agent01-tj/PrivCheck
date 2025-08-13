@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Help - PrivCheck</title>
+    <link rel="stylesheet" href="header-styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <h1 class="main-title">🔒 PrivCheck</h1>
+                <span class="subtitle">Windows Privilege Escalation Auditor</span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="audit.html" class="nav-link">Audit</a></li>
+                    <li><a href="results.html" class="nav-link">Results</a></li>
+                    <li><a href="help.html" class="nav-link active">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h2>❓ Help & Documentation</h2>
+            <p>Learn how to use PrivCheck effectively</p>
+        </section>
+
+        <section class="help-section">
+            <div class="help-content">
+                <div class="faq-item">
+                    <h3>What is PrivCheck?</h3>
+                    <p>PrivCheck is a Windows privilege escalation auditor designed to identify dangerous privileges that could lead to system compromise. It's a self-contained batch script that requires no dependencies and provides immediate security insights.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Why do I need to run it as Administrator?</h3>
+                    <p>Administrator privileges are required to:</p>
+                    <ul>
+                        <li>Access complete privilege information for the current user</li>
+                        <li>View all system-level security contexts</li>
+                        <li>Generate comprehensive audit reports</li>
+                        <li>Ensure accurate risk assessment</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>What privileges are considered dangerous?</h3>
+                    <p>PrivCheck monitors these high-risk privileges:</p>
+                    <ul>
+                        <li><strong>SeDebugPrivilege:</strong> Allows debugging of processes and direct memory access</li>
+                        <li><strong>SeImpersonatePrivilege:</strong> Enables impersonation of other users' security contexts</li>
+                        <li><strong>SeAssignPrimaryTokenPrivilege:</strong> Allows replacement of process tokens</li>
+                        <li><strong>SeTakeOwnershipPrivilege:</strong> Permits taking ownership of system objects</li>
+                        <li><strong>SeBackupPrivilege:</strong> Enables reading files while bypassing ACLs</li>
+                        <li><strong>SeRestorePrivilege:</strong> Allows writing files while bypassing ACLs</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How do I interpret the risk levels?</h3>
+                    <div class="risk-explanation">
+                        <div class="risk-item">
+                            <span class="risk-level low">LOW</span>
+                            <span>1 dangerous privilege found - Monitor and review</span>
+                        </div>
+                        <div class="risk-item">
+                            <span class="risk-level medium">MEDIUM</span>
+                            <span>2-3 dangerous privileges found - Immediate attention required</span>
+                        </div>
+                        <div class="risk-item">
+                            <span class="risk-level high">HIGH (CRITICAL)</span>
+                            <span>4+ dangerous privileges found - Critical security risk</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <h3>How to remediate dangerous privileges?</h3>
+                    <ol>
+                        <li>Open Local Security Policy (Start → Run → secpol.msc)</li>
+                        <li>Navigate to: Security Settings → Local Policies → User Rights Assignment</li>
+                        <li>For each dangerous privilege found:
+                            <ul>
+                                <li>Double-click the privilege name</li>
+                                <li>Remove unnecessary user accounts</li>
+                                <li>Keep only essential system accounts</li>
+                            </ul>
+                        </li>
+                        <li>Apply changes and restart if required</li>
+                        <li>Re-run PrivCheck to verify remediation</li>
+                    </ol>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Best Practices</h3>
+                    <ul>
+                        <li><strong>Regular Audits:</strong> Run PrivCheck monthly or after system changes</li>
+                        <li><strong>Principle of Least Privilege:</strong> Only grant necessary privileges</li>
+                        <li><strong>Service Account Review:</strong> Regularly audit service account privileges</li>
+                        <li><strong>Documentation:</strong> Keep records of privilege changes and justifications</li>
+                        <li><strong>Monitoring:</strong> Set up alerts for privilege modifications</li>
+                    </ul>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Troubleshooting</h3>
+                    <div class="troubleshooting">
+                        <h4>Script not running as administrator warning</h4>
+                        <p>Right-click the batch file and select "Run as administrator" to ensure full privilege visibility.</p>
+                        
+                        <h4>No output or empty report</h4>
+                        <p>Ensure you have proper permissions and the script is running on a Windows system with the whoami command available.</p>
+                        
+                        <h4>False positives</h4>
+                        <p>Some legitimate system accounts may require certain privileges. Review each privilege's necessity for your specific environment.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="help-actions">
+                <a href="audit.html" class="btn btn-primary">Start Audit</a>
+                <a href="https://github.com/juraev-exe/PrivCheck" target="_blank" class="btn btn-secondary">View on GitHub</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2023 PrivCheck by J. Abubakr | github.com: juraev.exe</p>
+    </footer>
+
+    <script src="header-scripts.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

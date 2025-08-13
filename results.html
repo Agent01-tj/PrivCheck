@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Results - PrivCheck</title>
+    <link rel="stylesheet" href="header-styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <h1 class="main-title">🔒 PrivCheck</h1>
+                <span class="subtitle">Windows Privilege Escalation Auditor</span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="audit.html" class="nav-link">Audit</a></li>
+                    <li><a href="results.html" class="nav-link active">Results</a></li>
+                    <li><a href="help.html" class="nav-link">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h2>📊 Audit Results</h2>
+            <p>Sample output from privilege escalation audit</p>
+        </section>
+
+        <section class="results-section">
+            <div class="result-summary">
+                <h3>Sample Audit Report</h3>
+                <div class="alert alert-warning">
+                    <h4>[!!!] SECURITY ALERT: 2 DANGEROUS PRIVILEGES FOUND [!!!]</h4>
+                    <p><strong>Privileges:</strong> SeImpersonatePrivilege, SeDebugPrivilege</p>
+                    <p><strong>Threat Level:</strong> MEDIUM</p>
+                </div>
+            </div>
+
+            <div class="detailed-results">
+                <h3>Security Impact Analysis</h3>
+                <div class="impact-grid">
+                    <div class="impact-item">
+                        <h4>[IMPERSON] Impersonate security contexts</h4>
+                        <p>This privilege allows the user to impersonate other users' security contexts, potentially leading to privilege escalation through token manipulation.</p>
+                    </div>
+                    <div class="impact-item">
+                        <h4>[DEBUG] Debug programs (Memory access)</h4>
+                        <p>Enables direct memory access to running processes, which can be exploited to inject code or extract sensitive information from other processes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="remediation-steps">
+                <h3>🛠️ Remediation Steps</h3>
+                <ol class="remediation-list">
+                    <li>Open Local Security Policy (secpol.msc)</li>
+                    <li>Navigate to: Security Settings → Local Policies → User Rights Assignment</li>
+                    <li>Remove unnecessary accounts from these privileges:
+                        <ul>
+                            <li>SeImpersonatePrivilege</li>
+                            <li>SeDebugPrivilege</li>
+                        </ul>
+                    </li>
+                    <li>Apply the principle of least privilege</li>
+                    <li>Audit service accounts monthly</li>
+                </ol>
+            </div>
+
+            <div class="audit-metadata">
+                <h3>📋 Audit Report Summary</h3>
+                <div class="metadata-grid">
+                    <div class="metadata-item">
+                        <strong>Report Path:</strong>
+                        <span>C:\Users\Administrator\user_privileges_20231215_1423.txt</span>
+                    </div>
+                    <div class="metadata-item">
+                        <strong>Audit Time:</strong>
+                        <span>Fri 12/15/2023 14:23:45</span>
+                    </div>
+                    <div class="metadata-item">
+                        <strong>User Context:</strong>
+                        <span>WORKSTATION\Administrator</span>
+                    </div>
+                    <div class="metadata-item">
+                        <strong>Host System:</strong>
+                        <span>WIN-DESKTOP-01</span>
+                    </div>
+                    <div class="metadata-item">
+                        <strong>Script Engine:</strong>
+                        <span>Windows Batch</span>
+                    </div>
+                    <div class="metadata-item">
+                        <strong>Version:</strong>
+                        <span>Final</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="actions">
+                <a href="audit.html" class="btn btn-primary">Run New Audit</a>
+                <a href="help.html" class="btn btn-secondary">Get Help</a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2023 PrivCheck by J. Abubakr | github.com: juraev.exe</p>
+    </footer>
+
+    <script src="header-scripts.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

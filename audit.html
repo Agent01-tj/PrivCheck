@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audit - PrivCheck</title>
+    <link rel="stylesheet" href="header-styles.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo-section">
+                <h1 class="main-title">🔒 PrivCheck</h1>
+                <span class="subtitle">Windows Privilege Escalation Auditor</span>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Home</a></li>
+                    <li><a href="audit.html" class="nav-link active">Audit</a></li>
+                    <li><a href="results.html" class="nav-link">Results</a></li>
+                    <li><a href="help.html" class="nav-link">Help</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <section class="page-header">
+            <h2>🔍 Security Audit</h2>
+            <p>Run privilege escalation audit on your Windows system</p>
+        </section>
+
+        <section class="audit-section">
+            <div class="audit-card">
+                <h3>Windows Privilege Checker</h3>
+                <p>This tool will analyze your current user privileges and identify any that could potentially lead to privilege escalation.</p>
+                
+                <div class="audit-steps">
+                    <div class="step">
+                        <span class="step-number">1</span>
+                        <div class="step-content">
+                            <h4>Download the Audit Script</h4>
+                            <p>Download the PrivCheck.bat file to your local system</p>
+                            <a href="Prevliges check .bat" download="PrivCheck.bat" class="btn btn-primary">Download Script</a>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">2</span>
+                        <div class="step-content">
+                            <h4>Run as Administrator</h4>
+                            <p>Right-click the downloaded file and select "Run as administrator"</p>
+                            <code>PrivCheck.bat</code>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <span class="step-number">3</span>
+                        <div class="step-content">
+                            <h4>Review Results</h4>
+                            <p>The script will generate a timestamped report file with audit results</p>
+                            <a href="results.html" class="btn btn-secondary">View Sample Results</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="privilege-info">
+                <h3>Privileges Checked</h3>
+                <div class="privilege-grid">
+                    <div class="privilege-item">
+                        <h4>SeDebugPrivilege</h4>
+                        <p>Debug programs (Memory access)</p>
+                        <span class="risk-level high">HIGH RISK</span>
+                    </div>
+                    <div class="privilege-item">
+                        <h4>SeImpersonatePrivilege</h4>
+                        <p>Impersonate security contexts</p>
+                        <span class="risk-level high">HIGH RISK</span>
+                    </div>
+                    <div class="privilege-item">
+                        <h4>SeAssignPrimaryTokenPrivilege</h4>
+                        <p>Replace process tokens</p>
+                        <span class="risk-level high">HIGH RISK</span>
+                    </div>
+                    <div class="privilege-item">
+                        <h4>SeTakeOwnershipPrivilege</h4>
+                        <p>Take object ownership</p>
+                        <span class="risk-level medium">MEDIUM RISK</span>
+                    </div>
+                    <div class="privilege-item">
+                        <h4>SeBackupPrivilege</h4>
+                        <p>Read bypassing ACLs</p>
+                        <span class="risk-level medium">MEDIUM RISK</span>
+                    </div>
+                    <div class="privilege-item">
+                        <h4>SeRestorePrivilege</h4>
+                        <p>Write bypassing ACLs</p>
+                        <span class="risk-level medium">MEDIUM RISK</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <p>&copy; 2023 PrivCheck by J. Abubakr | github.com: juraev.exe</p>
+    </footer>
+
+    <script src="header-scripts.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>

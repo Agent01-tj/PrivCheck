@@ -1,0 +1,442 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Content styles */
+.main-content {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 4rem 0;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.hero-section h2 {
+    font-size: 3rem;
+    color: #764ba2;
+    margin-bottom: 1rem;
+}
+
+.hero-section p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #764ba2;
+    border: 2px solid #764ba2;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.features-section {
+    margin-bottom: 3rem;
+}
+
+.features-section h3 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #764ba2;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.feature-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+}
+
+.feature-card h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    color: #764ba2;
+}
+
+.main-footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    margin-top: 3rem;
+}
+
+/* Page-specific styles */
+.page-header {
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+}
+
+.page-header h2 {
+    font-size: 2.5rem;
+    color: #764ba2;
+    margin-bottom: 1rem;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Audit page styles */
+.audit-section {
+    display: grid;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.audit-card {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.audit-steps {
+    display: grid;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.step {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+}
+
+.step-number {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+
+.step-content h4 {
+    color: #764ba2;
+    margin-bottom: 0.5rem;
+}
+
+.privilege-info {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.privilege-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.privilege-item {
+    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    position: relative;
+}
+
+.privilege-item h4 {
+    color: #764ba2;
+    margin-bottom: 0.5rem;
+    font-family: monospace;
+    font-size: 0.9rem;
+}
+
+.risk-level {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.risk-level.high {
+    background: #dc3545;
+    color: white;
+}
+
+.risk-level.medium {
+    background: #ffc107;
+    color: #212529;
+}
+
+.risk-level.low {
+    background: #28a745;
+    color: white;
+}
+
+/* Results page styles */
+.results-section {
+    display: grid;
+    gap: 3rem;
+}
+
+.result-summary, .detailed-results, .remediation-steps, .audit-metadata {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.alert {
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.alert-warning {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    color: #856404;
+}
+
+.alert h4 {
+    color: #721c24;
+    margin-bottom: 1rem;
+}
+
+.impact-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.impact-item {
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: 10px;
+    border-left: 4px solid #dc3545;
+}
+
+.impact-item h4 {
+    color: #dc3545;
+    margin-bottom: 1rem;
+    font-family: monospace;
+}
+
+.remediation-list {
+    margin-top: 2rem;
+    padding-left: 2rem;
+}
+
+.remediation-list li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+}
+
+.remediation-list ul {
+    margin-top: 0.5rem;
+    margin-left: 1rem;
+}
+
+.metadata-grid {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.metadata-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.metadata-item strong {
+    color: #764ba2;
+}
+
+.actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+/* Help page styles */
+.help-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    margin-bottom: 3rem;
+}
+
+.help-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 3rem;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.faq-item:last-child {
+    border-bottom: none;
+}
+
+.faq-item h3 {
+    color: #764ba2;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.faq-item ul, .faq-item ol {
+    margin-top: 1rem;
+    padding-left: 2rem;
+}
+
+.faq-item li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+.risk-explanation {
+    display: grid;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.risk-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 5px;
+}
+
+.troubleshooting h4 {
+    color: #764ba2;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.help-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 3rem;
+}
+
+code {
+    background: #f8f9fa;
+    padding: 0.25rem 0.5rem;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: #e83e8c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .main-title {
+        font-size: 2rem;
+    }
+    
+    .nav-list {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    
+    .hero-section h2 {
+        font-size: 2rem;
+    }
+    
+    .action-buttons, .actions, .help-actions {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .privilege-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .step {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .metadata-item {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
