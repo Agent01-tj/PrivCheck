@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "created_date": "2025-08-13",
+    "source": "README.md",
+    "description": "Database of picture files extracted from HTML/Markdown content",
+    "total_images": 3
+  },
+  "images": [
+    {
+      "id": 1,
+      "name": "Windows Platform Badge",
+      "alt_text": "Windows Privilege Audit",
+      "url": "https://img.shields.io/badge/Platform-Windows-blue?logo=windows",
+      "type": "badge",
+      "source_file": "README.md",
+      "source_line": 6,
+      "description": "Dynamic badge showing Windows platform compatibility",
+      "category": "platform_badge"
+    },
+    {
+      "id": 2,
+      "name": "Batch Script Badge", 
+      "alt_text": "Batch Script",
+      "url": "https://img.shields.io/badge/Language-Batch-green",
+      "type": "badge",
+      "source_file": "README.md",
+      "source_line": 7,
+      "description": "Dynamic badge showing Batch script language",
+      "category": "language_badge"
+    },
+    {
+      "id": 3,
+      "name": "Graph",
+      "alt_text": "Graph", 
+      "url": "https://github.com/user-attachments/assets/9a28e3b0-602d-47df-933a-133d33647c6b",
+      "type": "static_image",
+      "source_file": "README.md", 
+      "source_line": 21,
+      "description": "Static graph image from GitHub assets",
+      "category": "documentation_image"
+    }
+  ]
+}
