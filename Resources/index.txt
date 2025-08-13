@@ -1,0 +1,26 @@
+Picture Files Database Export Summary
+=====================================
+
+Export Date: 2025-08-13
+Source: README.md (HTML/Markdown content)
+
+Database Files:
+- picture_files_database.json (Main database)
+- README.md (Documentation)
+- extract_pictures.bat (Extraction utility)
+- index.txt (This file)
+
+Images Cataloged:
+1. Windows Platform Badge (shields.io)
+2. Batch Script Badge (shields.io)  
+3. Graph Image (GitHub assets)
+
+Total Images: 3
+
+Notes:
+- All image references have been successfully extracted
+- Dynamic badges preserved as URL references
+- Static images cataloged with metadata
+- Database includes source line numbers for traceability
+
+For detailed information, see Resources/README.md
